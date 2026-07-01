@@ -1,5 +1,7 @@
 # @codeinklingon/browser-mcp
 
+vibecoded port of oh-my-pi's browser tool as an mcp server
+
 MCP server for headless browser automation via Puppeteer. Drop-in replacement for `@playwright/mcp` with enhanced stealth anti-detection and Playwright-format ARIA snapshots.
 
 ## Usage
