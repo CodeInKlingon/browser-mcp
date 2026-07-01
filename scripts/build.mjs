@@ -19,6 +19,7 @@ await build({
   // native binaries and are installed as regular deps when the user
   // runs `npm install` (or `npx` pulls them).
   external: ['puppeteer-core', '@puppeteer/browsers'],
+  banner: { js: '#!/usr/bin/env node' },
   sourcemap: false,
   minify: false,
   keepNames: true,
