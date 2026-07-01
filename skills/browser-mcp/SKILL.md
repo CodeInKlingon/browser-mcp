@@ -140,13 +140,3 @@ await tab.click('text/Load more')
 const url = await tab.waitForUrl('/results', { timeout: 10000 })
 display('URL changed to: ' + url)
 ```
-
-## Installation
-
-This skill pairs with `@codeinklingon/browser-mcp`. Install both:
-
-```bash
-npx skills install codeinklingon/browser-mcp
-```
-
-This registers the MCP server in your `opencode.json` and loads the skill.
