@@ -18,6 +18,12 @@ Add to your `opencode.json`:
 }
 ```
 
+Or install the skill (registers the MCP server + loads AI guidance):
+
+```bash
+npx skills install @codeinklingon/browser-mcp
+```
+
 Or run directly:
 
 ```bash
@@ -119,7 +125,16 @@ const screenshot = await tab.screenshot()
 display(screenshot)
 ```
 
-## Build
+## Install
+
+```bash
+# Quick start — installs the skill and registers the MCP server
+npx skills install @codeinklingon/browser-mcp
+
+# Or manually add to opencode.json (see Usage above)
+```
+
+## Build from source
 
 ```bash
 npm install
