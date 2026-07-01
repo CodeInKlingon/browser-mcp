@@ -7,8 +7,10 @@
     "browser-mcp": "./dist/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "skills"
   ],
+  "skills": ["browser-mcp"],
   "scripts": {
     "generate": "node scripts/generate-assets.mjs",
     "build": "npm run generate && node scripts/build.mjs",
