@@ -131,7 +131,7 @@ display(screenshot)
 
 ```bash
 # Quick start — installs the skill and registers the MCP server
-npx skills install @codeinklingon/browser-mcp
+npx skills install codeinklingon/browser-mcp
 
 # Or manually add to opencode.json (see Usage above)
 ```

@@ -146,7 +146,7 @@ display('URL changed to: ' + url)
 This skill pairs with `@codeinklingon/browser-mcp`. Install both:
 
 ```bash
-npx skills install @codeinklingon/browser-mcp
+npx skills install codeinklingon/browser-mcp
 ```
 
 This registers the MCP server in your `opencode.json` and loads the skill.
