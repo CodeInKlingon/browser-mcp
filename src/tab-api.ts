@@ -193,10 +193,14 @@ export function createTabApi(page: Page, name: string): TabApi {
       const elements: ObserveElement[] = []
       let idCounter = 0
 
-      const walk = (node: typeof snapshot, depth = 0) => {
+      const walk = async (node: typeof snapshot, depth = 0) => {
         if (!node || depth > 15) return
         if (node.role && node.role !== 'RootWebArea' && node.role !== 'WebArea') {
           idCounter++
+          const handle = await node.elementHandle()
+          if (handle) {
+            observeCache.set(idCounter, handle)
+          }
           elements.push({
             id: idCounter,
             role: node.role ?? '',
@@ -206,9 +210,13 @@ export function createTabApi(page: Page, name: string): TabApi {
             states: (node as { states?: string[] }).states,
           })
         }
-        if (node.children) node.children.forEach((c) => walk(c, depth + 1))
+        if (node.children) {
+          for (const child of node.children) {
+            await walk(child, depth + 1)
+          }
+        }
       }
-      walk(snapshot)
+      await walk(snapshot)
 
       return { url, title, viewport: { width: vp.width, height: vp.height }, scroll, elements }
     },

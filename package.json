@@ -1,6 +1,6 @@
 {
   "name": "@codeinklingon/browser-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server for headless browser automation (Puppeteer-based)",
   "type": "module",
   "bin": {
