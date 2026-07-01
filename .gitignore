@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.browser-cache/
+
+# Generated — edit the .txt sources and regenerate
+src/aria/aria-bundle.ts
+src/stealth/patches.ts
